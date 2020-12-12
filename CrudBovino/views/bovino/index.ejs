@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <% include ../estrutura/head.ejs %>
+</head>
+<body id="top">
+
+<!--CONTEUDO-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <div class="divform">
+               
+            <h1 class="mt-3 mb-4 text-center"><%- pg_titulo %></h1>
+            <form action="/bovino/create" method="post" autocomplete="off" required>
+
+                <input type="hidden" value="<%= bovino._id %>" name="bovino[_id]">
+                 <div class="form-row">
+                <div class="form-group col-md-9">
+                    <label for="raca">Raça:</label>
+                    <select class="select-css" name="bovino[raca]" id="" required>
+                        <option value="" selected>Selecione uma raça</option>
+                        <% racas.forEach((raca) => { %>
+                            <option value="<%-raca.raca%>"><%=raca.raca%></option>
+                        <% }) %>
+                    </select>
+                </div>
+                   <div class="form-group col-md-9">
+                        <label for="rebanho">Rebanho:</label>
+
+                        <select class="select-css" name="bovino[rebanho]" id="">
+                            <option value="" selected>Selecione um rebanho</option>
+                            <% rebanhos.forEach((rebanho) => { %>
+                            <option value="<%-rebanho.nome%>"><%=rebanho.nome%></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                 
+                    <div class="form-group col-md-9">
+                        <label for="tipo">Tipo:</label>
+                        <select class="select-css" name="bovino[tipo]" id="" required>
+                                <option value="Bezerra">Bezerra</option>
+                                <option value="Bezerro">Bezerro</option>
+                                <option value="Novilha">Novilha</option>
+                                <option value="Novilho">Novilho</option>
+                                <option value="Vaca">Vaca</option>
+                                <option value="Boi">Boi</option> 
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-9">
+                        <label for="genero">Genero:</label>
+                        <select class="select-css" name="bovino[genero]" id="" required>
+                            <option value="" selected>Selecione um tipo</option>
+                            <option value="Macho">Macho</option>
+                            <option value="Fêmea">Fêmea</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group col-md-9">
+                        <label for="peso">Peso:</label>
+                        <input type="text"   class="form-control" id="peso" name="bovino[peso]" required  value="<%= bovino.peso %>" >
+                    </div>
+                </div>
+                
+                <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+               <button type="submit" class="login100-form-btn"><i class="fas fa-plus"></i> Cadastrar</button>
+                    <% if (lenBovinos > 0 && pg_titulo != 'Editar bovino') {
+                    %> <a href="/bovino/list">
+                        <button type="button" class="login100-form-btn"><i class="fas fa-list"></i> Ver todos
+                        </button>
+
+                    </a>
+                    <%
+                    } %>
+            </div>
+          </div>
+
+            </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
+</div>
+
+<!--CONTEUDO-->
+
+</body>
+</html>
+
+<style type="text/css">
+    .form-row{
+    background-color: white;
+    opacity: 0.8;
+ }
+ .nada{
+    margin: 50px;
+ }
+</style>

@@ -1,0 +1,116 @@
+<title><%-titulo%></title>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<!--===================================================================aqq -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
+    <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+<script src="/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<body id="top">
+    <header>
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container"><a class="navbar-brand" href="/"><strong>BovinApp</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link active" href="/home"><i class="fas fa-home"></i>Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/bovino"><i class="fas fa-tasks"></i>Cadastrar Bovinos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/alimento"><i class="fas fa-tasks"></i>Cadastrar Alimento</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/rebanho"><i class="fas fa-tasks"></i>Cadastrar Rebanho</a></li>
+              <hr>
+              <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-reply"></i>Sair</a></li>         
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+<!--CONTEUDO-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mt-3 mb-4 text-center">Lista de rebanho</h1>
+            <table class="table table-striped" style="font-size: 14px">
+                <thead>
+                <tr>
+                    <th class="align-middle text-center">NOME DE REFERENCIA PARA O REBANHO</th>
+                    <th class="align-middle text-center">DATA DE CADASTRO</th>
+                    <th class="align-middle text-center">DESCRIÇÃO</th>
+                    <th class="align-middle text-center">Editar | Remover </th>
+                </tr>
+                </thead>
+                <tbody>
+                <% rebanhos.forEach((rebanho) => { %>
+                    <tr>
+                        <td class="align-middle text-center"><%- rebanho.nome %></td>
+                        <td class="align-middle text-center"><%- rebanho.dataentrada %></td>
+                        <td class="align-middle text-center"><%- rebanho.desc %></td>
+                        <td class="align-middle text-center">
+                            <a href="/rebanho/edit/<%-rebanho._id.toString()%>"><button class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i></button></a>
+                          </td>
+                          <td class="align-middle text-center">
+                            <a href="/rebanho/delete/<%-rebanho._id.toString()%>"><button class="btn btn-outline-primary"><i class="fas fa-trash"></i></button></a>
+                        </td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--CONTEUDO-->
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>new WOW().init();</script>
+  </body>
+</html>
+
+<style type="text/css">
+ table{
+    background-color: white;
+    opacity: 0.8;
+ }
+</style>

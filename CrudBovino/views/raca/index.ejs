@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <% include ../estrutura/head.ejs %>
+</head>
+<body id="top">
+
+<!--CONTEUDO-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <div class="divform">
+
+                <h1 class="mt-3 mb-4 text-center"><%-pg_titulo %></h1>
+                <form action="/raca/create" method="post" autocomplete="off" required>
+
+                    <input type="hidden" value="<%= raca._id %>" name="raca[_id]">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="raca">Raça:</label>
+                            <input type="text" class="form-control" id="raca" name="raca[raca]" maxlength="20"
+                                   required
+                                   autofocus value="<%=raca.raca %>">
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button type="submit" class="login100-form-btn"><i class="fas fa-plus"></i> Cadastrar
+                            </button>
+                            <% if (lenRaca > 0 && pg_titulo != 'Editar bovino') {
+                            %> <a href="/raca/list">
+                                <button type="button" class="login100-form-btn"><i class="fas fa-list"></i> Ver todos
+                                </button>
+
+                            </a>
+                            <%
+                            } %>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--CONTEUDO-->
+
+</body>
+</html>
+
+<style type="text/css">
+    .form-row {
+        background-color: white;
+        opacity: 0.8;
+    }
+
+    .nada {
+        margin: 50px;
+    }
+</style>

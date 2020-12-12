@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="full-height" lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BovinApp</title>
+    <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+  <body id="top">
+    <header>
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container"><a class="navbar-brand" href="#"><strong>BovinApp</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link active" href="/home">Logado como :<%- user.nome %></a></li>
+              <li class="nav-item"><a class="nav-link" href="/logout">Sair</a></li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="view hm-gradient" id="intro">
+        <div class="full-bg-img d-flex align-items-center">
+          <div class="container">
+            <div class="row no-gutters">
+              <div class="col-md-10 col-lg-8 text-center text-md-left margins">
+                <div class="white-text">
+                  <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                    <h1>Bem Vindo Sr(a) <%- user.nome %></h1>
+                   <img src="../img/bovinapp.png" style="width: 250px;
+        height: 200px;">
+                    <div class="h6">
+                      ProjetoFinal de DSC, O Controle bovino tem como finalidade cadastrar bovinos e seus respectivos alimentos, para que tenham mais portabilidade e organização em seus lotes de gado.
+                    </div>
+                  </div><br>
+                  <div class="wow fadeInLeft" data-wow-delay="1s">
+                    <a class="btn btn-outline-white" href="/raca"> Cadastrar Raças</a>
+                    <a class="btn btn-outline-white" href="/bovino"> Cadastrar Bovinos</a>
+                    <a class="btn btn-outline-white" href="/alimento"> Cadastrar Alimentos</a>
+                    <a class="btn btn-outline-white" href="/rebanho">Cadastrar Rebanhos</a>
+                    <a class="btn btn-outline-white" href="/pesquisar">Pesquisar bovinos</a>
+                    <a class="btn btn-outline-white" href="/pesquisarali">Pesquisar alimentos</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+ <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>new WOW().init();</script>
+
+</body>
+</html>

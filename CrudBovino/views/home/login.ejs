@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <% include ../estrutura/head_login.ejs %>
+</head>
+<body>
+
+<!--CONTEUDO-->
+
+<form class="box" action="/Entrar" method="POST">
+<div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-26">
+            <h5>Login - BovinApp</h5>
+          </span>
+          <span class="login100-form-title p-b-48">
+            <img src="../img/bovinapp.png" style="width: 250px;
+        height: 200px;">
+          </span>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text"  name="usuario[login]" autofocus>
+            <span class="focus-input100" data-placeholder="login"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <span class="btn-show-pass">
+              <i class="zmdi zmdi-eye"></i>
+            </span>
+            <input class="input100" type="password" name="usuario[senha]">
+            <span class="focus-input100" data-placeholder="Password"></span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button type="submit" class="login100-form-btn">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center p-t-115">
+            <span class="txt1">
+              Don’t have an account?
+            </span>
+            <a class="txt2" href="/signup">
+              Sign Up
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+<% include ../footer %>
+<!--CONTEUDO-->
+
+</body>
+</html>

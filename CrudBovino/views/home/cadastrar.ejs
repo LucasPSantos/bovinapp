@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <% include ../estrutura/head_login.ejs %>
+</head>
+<body>
+
+<!--CONTEUDO-->
+
+<form class="box" action="/create_usuario" method="post" autocomplete="off">  
+    <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-26">
+            <h5>BovinApp - Cadastro</h5>
+          </span>
+          <span class="login100-form-title p-b-48">
+            <img src="../img/bovinapp.png" style="width: 250px;
+        height: 200px;">
+          </span>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text"  name="usuario[nome]">
+            <span class="focus-input100" data-placeholder="nome"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text"  name="usuario[sobrenome]">
+            <span class="focus-input100" data-placeholder="sobrenome"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text"  name="usuario[login]">
+            <span class="focus-input100" data-placeholder="login"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Enter password">
+            <span class="btn-show-pass">
+              <i class="zmdi zmdi-eye"></i>
+            </span>
+            <input class="input100" type="password" name="usuario[senha]">
+            <span class="focus-input100" data-placeholder="Password"></span>
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button type="submit" class="login100-form-btn">
+                Cadastrar
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center p-t-115">
+            <span class="txt1">
+              Quer logar?!
+            </span>
+            <a class="txt2" href="/login">
+              Signin!
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!--CONTEUDO-->
+
+<footer class="page-footer indigo darken-2 center-on-small-only pt-0 mt-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="famb-5 flex-center"><a href="https://www.facebook.com/lucas.pascoal.319"class="px-6">-</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container-fluid">
+          <p>&copy; <a href="/">Link</a> - Design: <a href="https://www.facebook.com/lucas.pascoal.319" target="_blank">LucasPascoal</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>new WOW().init();</script>
+  </body>
+</html>
+
+<style type="text/css">
+  form{
+    margin-top: 20px;
+  }
+</style>

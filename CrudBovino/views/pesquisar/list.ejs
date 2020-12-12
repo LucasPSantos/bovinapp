@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <% include ../estrutura/head.ejs %>
+</head>
+<body id="top">
+
+<!--CONTEUDO-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mt-3 mb-4 text-center">Lista de bovino</h1>
+            <table class="table table-striped" style="font-size: 14px">
+                <thead>
+                <tr>
+                    <th class="align-middle text-center">RAÇA</th>
+                    <th class="align-middle text-center">DATA DE CADASTRO</th>
+                    <th class="align-middle text-center">TIPO</th>
+                    <th class="align-middle text-center">GENERO</th>
+                    <th class="align-middle text-center">PESO</th>
+                    <th class="align-middle text-center">Rebanho Atual</th>
+
+                    <th class="align-middle text-center">Editar / Remover</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% bovinos.forEach((bovino) => { %>
+                    <tr>
+                        <td class="align-middle text-center"><%- bovino.raca %></td>
+                        <td class="align-middle text-center"><%- bovino.dataentrada %></td>
+                        <td class="align-middle text-center"><%- bovino.tipo %></td>
+                        <td class="align-middle text-center"><%- bovino.genero %></td>
+                        <td class="align-middle text-center"><%- bovino.peso %></td>
+                        <td class="align-middle text-center"><%- bovino.rebanho%></td>
+                        <td class="align-middle text-center">
+                            <a href="/bovino/edit/<%-bovino._id.toString()%>"><button class="btn btn-outline-primary"><i class="fas fa-pencil-alt"></i></button></a>
+                            <a href="/bovino/delete/<%-bovino._id.toString()%>"><button class="btn btn-outline-primary"><i class="fas fa-trash"></i></button></a>
+                        </td>
+                    </tr>
+                <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--CONTEUDO-->
+<% include ../footer %>
+
+
+<style type="text/css">
+ table{
+    background-color: white;
+    opacity: 0.8;
+ }
+</style>

@@ -1,0 +1,104 @@
+<title><%-titulo%></title>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" type="image/png" href="../img/BovinApp.png"/>
+<script type="text/javascript">
+  function limite(e){   
+    try{var element = e.target      
+    }catch(er){};   
+    try{
+      var element = event.srcElement  
+    }catch(er){};       
+    try{var ev = e.which     
+    }catch(er){};    
+    try{var ev = event.keyCode 
+    }catch(er){};    
+    if((ev!=6) && (ev!=8) &&(ev!=13))     
+      if  (! RegExp(/[0-9]/gi).test(String.fromCharCode(ev))) 
+        return false;           
+      if(element.value + String.fromCharCode(ev) > 9999) 
+    return false;     
+} 
+window.onload = function(){   
+document.getElementById('custo').onkeypress = limite
+document.getElementById('kg').onkeypress = limite 
+document.getElementById('peso').onkeypress = limite 
+}
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->  
+  <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<!--===================================================================aqq -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
+    <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+   
+<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+<script src="/node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<body id="top">
+    <header>
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container"><a class="navbar-brand" href="/home"><strong>BovinApp</strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link active" href="/home"><i class="fas fa-home"></i>Inicio</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/pesquisar"><i class="fas fa-search"></i>Pesquisar bovinos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/pesquisarali"><i class="fas fa-search"></i>Pesquisar alimento</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/raca"><i class="fas fa-tasks"></i>Cadastrar Raças</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/alimento"><i class="fas fa-tasks"></i>Cadastrar Alimentos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/bovino"><i class="fas fa-tasks"></i>Cadastrar Bovinos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="/rebanho"><i class="fas fa-tasks"></i>Cadastrar Rebanho</a></li>
+              <li class="nav-item"><a class="nav-link" href="/logout"><i class="fas fa-reply"></i>Sair</a></li>         
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <bR>
+    <hr>
+    <style type="text/css">
+  header{
+    margin: 60px;
+  }
+</style>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script>new WOW().init();</script>
